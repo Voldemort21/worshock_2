@@ -14,13 +14,12 @@ const articulo_1= Number("costo del articulo");
 let name_articulo_2=prompt("introduce el nombre del articulo");
 const articulo_2= Number("costo del articulo");
 
-let name_articulo_3=prompt("introduce el nombre del articulo");
-const articulo_3= Number("costo del articulo");
+
 
 
 let x=sub_total-articulo_1;
 let y=sub_total-articulo_2;
-let z=sub_total-articulo_3;
+
 
 
 
@@ -28,44 +27,37 @@ let z=sub_total-articulo_3;
 list_0=[]
 
 if (x>=0){
-    list_0.push(x);
+    list_0.push([articulo_1,x]);
 }
 
 if (y>=0){
-    list_0.push(y);
-}
-
-if (z>=0){
-    list_0.push(z);
-}
-
-if (z==y==x){
-    console.log(`los productos adecuados que se ajustan a tu presupuesto son: ${articulo_1}, ${articulo_2},${articulo_3}`)
-}
-
-if (z==y){
-    console.log(`los productos adecuados que se ajustan a tu presupuesto son:${articulo_2},${articulo_3}`)
-
-}
-list=[name_articulo,articulo_1]
-list_1=[name_articulo_2,articulo_2]
-list_2=[name_articulo_3,articulo_3]
-
-list_global=[list,list_1,list_2]
-
-let articulo_barato=Math.min(list_0);
-
-if (list.include(articulo_barato)){
-    console.log(`el articulo más economico`)
+    list_0.push([articulo_2,y]);
 }
 
 
 
-if (presupuesto_julian-costo>umbral){
-    console.log("el presupuesto te alcanza para comprar el articulo")
+
+
+if (list_0.length===2){
+    list_1=[list_0[0][1],list_0[1][1]]
+    if (list_0[0][1]===list_0[1][1]){
+        console.log(`los productos adecuados que se ajustan a tu presupuesto son: ${articulo_1}, ${articulo_2}`)
+    }
+    else{
+        const numero=Math.max(...list_1.map(e=>e)) ;   
+        if    (list_0.indexOf(numero)!== -1){
+            console.log(`el producto adecuado para usted es: ${list_0[0][0]}`)        
+        } 
+        else{
+            console.log(`el producto adecuao para su presupuesto es: ${list_0[1][0]}`)
+        }
+    }
 }
+
 else{
-    console.log("Julian ten cuidado!, no puedes llevar el articulo, el presupuesto no te alcanza")
+    console.log(`el producto adecuado para su presupuesto es: ${list_0[0][0]}`)
 }
+
+
 
 
