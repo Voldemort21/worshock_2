@@ -99,7 +99,7 @@ Descripción: Julian necesita un programa en JavaScript que le ayude a decidir s
 - Requerimientos del Programa:
     - Evaluación del Presupuesto:
         - El programa debe permitir a Julian ingresar el total de su presupuesto inicial y los costos estimados de su viaje, incluyendo alojamiento, transporte y comida.
-        - Julian desea saber si el dinero que le queda después de cubrir estos gastos básicos es suficiente para adquirir un artículo extra que ha estado considerando.
+        - Julian desea saber si el dinero que le queda después de cubrir estos gastos básicos es suficiente para adquirir un artículo extra que ha estado considerando.let
     - Lógica de Decisión:
         - Utiliza una estructura if-else para determinar si el presupuesto restante supera un cierto umbral. Si Julian tiene más dinero que este umbral, entonces puede considerar llevar el artículo extra.
         - Si el dinero restante es inferior al umbral, el programa debería aconsejar a Julian que evite gastos adicionales para no sobrepasar su presupuesto.
